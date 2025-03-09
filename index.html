@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <link rel="stylesheet" href="style.css">
+  <!-- <link rel="stylesheet" href="style.css"> -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
@@ -9,31 +9,51 @@
   
   <title>Frontend Mentor | NFT preview card component</title>
 
+  <script src="https://cdn.tailwindcss.com"></script>
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
     .attribution { font-size: 11px; text-align: center; }
     .attribution a { color: hsl(228, 45%, 44%); }
   </style>
-</head>
-<body>
-  <div class="container">
-    <img src="/images/image-equilibrium.jpg" alt="picture" class="main">
-<div class="info">
-  <div class="equilibrium"> <h2>Equilibrium #3429</h2></div>
 
-  <div class="description"><p>Our Equilibrium collection promotes balance and calm.</p></div>
-<div class="other">
-  <div class="ethereum">
+<script>
+  tailwind.config = {
+      theme: {
+          extend: {
+              colors: {
+                  primary: '#00000d',
+                  secondary: '#14253d',
+                  accent: '#0d192b',
+                  grey: '#8bacda',
+                  line: '#2f415b'
+              }
+          }
+      }
+  };
+</script>
+
+
+
+</head>
+<body class="bg-accent flex justify-center items-cener">
+  <div class="bg-secondary w-1/4 rounded-lg  mt-7 p-2">
+    <img src="/images/image-equilibrium.jpg" alt="picture" class="mb-0 rounded-lg flex justify-center items-center">
+<div class="text-white p-5 mt-0">
+  <div class="mt-0 pt-0"> <h2 class="font-bold text-xl">Equilibrium #3429</h2></div>
+
+  <div class="text-grey"><p>Our Equilibrium collection promotes balance and calm.</p></div>
+<div class="flex justify-between mt-4  pb-3 border-b-2 mb-0 border-line">
+  <div class=" text-cyan-300 flex gap-x-2 ">
     <img src="/images/icon-ethereum.svg" alt="">
     0.041 ETH</div>
-  <div class="clock">
+  <div class=" text-grey flex gap-x-2">
     <img src="/images/icon-clock.svg" alt="">
     3 days left</div>
   </div>
   
-  <div class="avatar">
-    <img src="/images/image-avatar.png" alt="">
-    Creation of <span>Jules Wyvern</span></div>
+  <div class=" text-grey flex justify-center items-center mt-4">
+    <img src="/images/image-avatar.png" alt="" class="w-12 h-12 mr-5 border-white border-2 rounded-full ml-0 pl-0">
+    Creation of<span class=" ml-1 font-bold text-white">Jules Wyvern</span></div>
 </div>
 </div>
   <!-- <div class="attribution">
